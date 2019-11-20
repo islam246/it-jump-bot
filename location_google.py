@@ -1,6 +1,10 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
+from functools import wraps
+
+def error():
+    raise ValueError
 def distance_google(location_from, location_where):
     l_from = location_from
     l_where = location_where
